@@ -1,0 +1,20 @@
+{
+  "application": {
+    "environment": "dev",
+    "name": ".NET APIOrderDispatchsDelivery Services",
+    "version": "1.0.0",
+    "description": "",
+    "hostname": "localhost",
+    "alwayRunSchedule": true,
+    "runHour": 9,
+    "runMinute": 24,
+    "emails": {
+      "DefaultFrom": "josh.vu@tpfgroup.cc",
+      "DefaultTo": "josh.vu@tpfgroup.cc",
+      "DefaultBCC": "josh.vu@tpfgroup.cc,finn.dinh@tpfgroup.cc"
+    },
+    "apiUrl": "https://localhost:44355",
+    "apiSecToken": "hwkxRNLbCB8GNddI1saIIA",
+    "delayHour": 3
+  }
+}

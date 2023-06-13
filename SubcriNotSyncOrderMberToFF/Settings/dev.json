@@ -1,0 +1,63 @@
+{
+    "application": {
+        "environment": "dev",
+        "name": ".NET_SubcriNotSyncOrderMberToFF",
+        "version": "1.0.0",
+        "description": "",
+        "hostname": "localhost",
+        "alwayRunSchedule": false,
+        "runHour": 10,
+        "runMinute": 10,
+        "emails": {
+            "DefaultFrom": "josh.vu@tpfgroup.cc",
+            "DefaultTo": "josh.vu@tpfgroup.cc",
+            "DefaultCC": "josh.vu@tpfgroup.cc",
+            "DefaultBCC": "josh.vu@tpfgroup.cc"
+        },
+        "services": {
+            "awsSQS": {
+                "Provider": "AWS",
+                "Enabled": "true",
+                "EnablePublisher": "true",
+                "EnableSubscriber": "true",
+                "RegionEndpoint": "ap-southeast-1",
+                "AccessKey": "AKIA3H5K5T46ZUIU5LPY",
+                "SecretKey": "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",
+                "QueueUrl": "https://sqs.ap-southeast-1.amazonaws.com/772915699517/demo-schedule-system"
+            }
+        }
+    },
+    "config": {
+        "dbs": {
+            "CreateDataBase": false,
+            "connectionstring": {
+                "192.168.21.69": {
+                    "ExternalServicesDatabase": "Server=192.168.21.69;Database=ExternalServices;user id=tuan.tran;password=TT@tpf2022;MultipleActiveResultSets=True;Encrypt=False;TrustServerCertificate=False"
+                },
+                "192.168.7.203": {
+                    "TpfservicesDatabase": "Server=10.0.2.44;Database=TPFServices;user id=sa;password=tpf@75high;MultipleActiveResultSets=True;Encrypt=False;TrustServerCertificate=False",
+                    "Csversion1Database": "Server=10.0.2.44;Database=Csversion1;user id=sa;password=tpf@75high;MultipleActiveResultSets=True;Encrypt=False;TrustServerCertificate=False",
+                    "TpfsystemDatabase": "Server=10.0.2.44;Database=Tpfsystem;user id=sa;password=tpf@75high;MultipleActiveResultSets=True;Encrypt=False;TrustServerCertificate=False",
+                    "Tpf2003Database": "Server=10.0.2.44;Database=Tpf2003;user id=sa;password=tpf@75high;MultipleActiveResultSets=True;Encrypt=False;TrustServerCertificate=False",
+                    "OnlineSyncDataDatabase": "Server=10.0.2.44;Database=OnlineSyncData;user id=sa;password=tpf@75high;MultipleActiveResultSets=True;Encrypt=False;TrustServerCertificate=False"
+                },
+                "10.0.2.155": {
+                    //"CMS_EMBERPLUS_DEVDatabase": "Server=10.0.2.155;Database=CMS_EMBERPLUS_UAT;user id=peter.nguyen;password=xxtdvXZUWXpRkEYQ;MultipleActiveResultSets=True;Encrypt=False;TrustServerCertificate=False"
+                    "CMS_EMBERPLUS_DEVDatabase": "Server=10.0.2.155;Database=CMS_EMBERPLUS;user id=peter.nguyen;password=xxtdvXZUWXpRkEYQ;MultipleActiveResultSets=True;Encrypt=False;TrustServerCertificate=False"
+                },
+                "localhost": {
+                    "LocalhostDatabase": "Data Source=localhost; Initial Catalog=testDB;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=False",
+                    "Localhost2Database": "Data Source=localhost; Initial Catalog=BackgroundTask;Trusted_Connection=True;Encrypt=False;TrustServerCertificate=False"
+                }
+            }
+        },
+        "email": {
+            "Host": "email-smtp.us-east-1.amazonaws.com",
+            "Port": 587,
+            "SslRequired": false,
+            "TlsRequired": false,
+            "UserName": "AKIAYDAWS3ZI5VR33VX3",
+            "Password": "BN6C1K4cKO79AHD4XJkbBYo/Rk/EAMHFGpsWCkGaDGhr"
+        }
+    }
+}
